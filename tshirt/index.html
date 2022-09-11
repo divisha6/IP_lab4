@@ -1,0 +1,241 @@
+<!-- Design a HTML form to take inputs to place order for  Customized T shirts. Accept fields like Tagline on the shirt, color, size, quantity, date and other details of delivery etc.  (include HTML5 form tags) -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>T-shirt shop</title>
+  
+  <style>
+    figure {
+      text-align: center;
+      color: purple;
+    }
+
+    figure:hover {
+      background-color: #adadad;
+    }
+
+    body {
+      margin-left: 30px;
+      background-color: lavenderblush;
+      line-height: 20px;
+    }
+
+    header {
+      margin-top: 50px;
+      text-align: center;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .col1 {
+      display: flex;
+    }
+
+    #customerdetails {
+      text-decoration: underline;
+    }
+
+    img {
+      padding: 5px;
+    }
+
+    details.p {
+      color: beige;
+      display: block;
+    }
+
+    button:hover {
+      color: indigo;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h2>New custom printed t-shirt from Cargo</h2>
+  </header>
+
+  <!-- <img src="https://goodmockups.com/wp-content/uploads/2017/08/Free-Black-White-Half-Sleeves-T-Shirt-Mockup-PSD.jpg" alt="google.com"> -->
+  <figure>
+    <img
+      src="https://media.istockphoto.com/vectors/white-and-black-tshirt-mockup-sport-blank-shirt-template-front-and-vector-id1167513757?k=20&m=1167513757&s=170667a&w=0&h=w50XV0Yt12I0EcLnVEkvf0q5P7iflooTXdcU0nNALUg="
+      alt="google.com">
+    <figcaption>Make amazing custom t-shirts in bulk at lower prices!</figcaption>
+  </figure>
+
+  <br>
+
+  <button id="sharebtn">
+    Share
+  </button>
+
+  <br>
+  <br>
+  <br>
+<form name="myForm"
+    id="place_order"
+    onsubmit="return validateForm()"
+    enctype="multipart/form-data"
+    method="put">
+
+  <label for="size">Choose your size:</label>
+
+  <select name="size" id="sizechart">
+    <option value="XS">XS</option>
+    <option value="S">S</option>
+    <option value="M">M</option>
+    <option value="L">L</option>
+    <option value="XL">XL</option>
+    <option value="XXL">XXL</option>
+  </select>
+
+  <mark>
+    <h4>Type in the words you want to print on your custom t-shirt:</h4>
+  </mark>
+  <input type="textarea" name="custom" placeholder="Enter your text">
+  <br>
+  <div>
+    <br>
+    <input checked type="radio" name="color" value="black" id="black" />
+    <label for="flexRadioDefault1"> Black </label>
+  </div>
+  <div>
+    <input type="radio" name="color" value="blue" id="blue" />
+    <label for="flexRadioDefault2"> Blue </label>
+  </div>
+  <div>
+    <input type="radio" name="color" id="red" value="red" />
+    <label for="flexRadioDefault3"> Red </label>
+  </div>
+  <div>
+    <input type="radio" name="color" id= "white" value="white" />
+    <label for="flexRadioDefault4"> White </label>
+  </div>
+  <br />
+  </div>
+
+  <input type="range" id="volume" name="qty" value="1" min="1" max="5" />
+  <label for="volume">Quantity</label>
+  <br>
+  <br>
+  <label for="date">Select Delivery Date:</label>
+
+  <input type="date" id="date" name="date" value="2022-07-22" min="2022-08-01" max="2022-12-31" />
+  </section>
+  <br />
+  <p>Total: $47.99</p>
+  <article>
+    <i>
+      <strong>
+        <p>Choose Payment Method</p>
+      </strong>
+    </i>
+
+    <div>
+      <input checked type="radio" name="payment" value="credit_debit" id="credit_debit" />
+      <label for="flexRadioDefault5"> Credit/Debit Card </label>
+    </div>
+    <div>
+      <input type="radio" name="payment" value="upi" id="upi" />
+      <label for="flexRadioDefault6"> UPI </label>
+    </div>
+    <div>
+      <input type="radio" name="payment" value="wallet" id="wallet" />
+      <label for="flexRadioDefault8"> Pay using wallet </label>
+    </div>
+    <div>
+      <input type="radio" name="payment" value="delivery" id="delivery" />
+      <label for="flexRadioDefault7"> Pay on delivery </label>
+    </div>
+
+  </article>
+  <br>
+  <button type="button">Click here to proceed</button>
+  <br>
+  <hr>
+
+  <br>
+  <br>
+
+
+  <label for="fname">First Name</label><br /><br />
+  <input type="text" id="fname" name="fname" placeholder="Enter Your first name here" /><br /><br />
+
+  <label for="lname">Last Name</label><br /><br />
+  <input type="text" id="lname" name="lname" placeholder="Enter Your Surname here" /><br /><br />
+
+  <label for="address">Address</label><br /><br />
+  <textarea name="address" id="address" cols="20" rows="3" maxlength="200"
+    placeholder="Enter Your address here"></textarea><br /><br />
+
+  <label for="Contact">Contact No:-</label><br /><br />
+  <input type="tel" name="Contact" id="Contact" maxlength="10" placeholder="Enter Your contact no. here" /><br /><br />
+
+  <label for="email">Email:-</label><br /><br />
+  <input type="email" name="email" id="email" placeholder="Enter your Email Here" /><br /><br />
+
+
+  </section>
+
+  <br>
+
+  <button id="place_order" type="submit">Place Order</button>
+  </form>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <br>
+  <hr>
+  <br>
+  <strong>
+    <i>
+      Please submit a feedback!
+    </i>
+  </strong>
+  <br>
+  <details id="feedback">
+    <p>
+      Your feedback is valuable to us and will help us improve our services!
+    </p>
+    <textarea id="feedback" placeholder="Type in your thoughts"> </textarea>
+    <br>
+    <br>
+    <button>Submit feedback</button>
+  </details>
+
+  <br>
+
+  <hr>
+
+  <h3>View similar products!
+  </h3>
+  <br>
+  <div class="col1">
+    <img height="200px"
+      src="https://media.istockphoto.com/photos/red-tshirt-clothes-on-isolated-picture-id802266788?k=20&m=802266788&s=612x612&w=0&h=wKn29t8rLxy9QeX8bbPjnTWBO9TcqN4h-EDkVrdfUIU="
+      alt="red custom t-shirt">
+    <img height="200px" src="https://src1.ilogo.in/images/products/661/custom-mens-t-shirt.webp" alt="model">
+    <img height="200px" src="https://5.imimg.com/data5/SH/GC/MY-8764775/mens-t-shirt-500x500.jpg" alt="">
+  </div>
+
+
+  <button>View more >></button>
+</body>
+<br>
+<hr>
+
+</form>
+</section>
+<script src="index.js"></script>
+</body>
+
+</html>
