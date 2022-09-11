@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <title>Lab4 Part 2</title>
+    </head>
+    <body>
+        <h1>IP Lab experiment 4</h1>
+        <h2>~ Part 2 ~</h2>
+    </body>
+    <script>
+        // Creating a Person Object
+        const person1 = {
+            name: "Divisha Gupta",
+            class_name: "D15A",
+            roll_no: 16,
+        };
+        console.log("Person 1: ", person1);
+
+        class Person {
+            constructor(name, class_name, roll_no) {
+                this.name = name;
+                this.class_name = class_name;
+                this.roll_no = roll_no;
+            }
+        }
+
+        const person2 = new Person("Upendra Falak", "D15A", 15);
+        console.log("Person 2: ", person2);
+    </script>
